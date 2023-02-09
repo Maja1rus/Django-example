@@ -1,0 +1,71 @@
+{% load core_tags core_filters %}
+
+<div class="prices__wrap prices__wrap_one">
+    <div class="prices__info">
+        <h2 class="h2">
+            {% chunk 'prices.title' %}
+        </h2>
+        <span class="prices__subtitle">
+            {% chunk 'prices.subtitle' %}
+        </span>
+        <div class="prices__installments">
+            <span>
+                {% chunk 'prices.installments' %}
+            </span>
+        </div>
+        <div class="prices__label">
+            {% svg 'm-prices-label.svg' %}
+            <span>{% chunk 'prices.label' %}</span>
+        </div>
+    </div>
+    <div class="prices__list">
+        {% for id, price in list.items %}
+            <div class="prices__item">
+                <div class="pri__top">
+                    <div class="pri__top-wrap">
+                        <div class="pri__top-text">
+                            <div class="pri__title">
+                                {% img_tag price.flag width=36 height=22 class="pri__flag" %}
+                                <h3 class="pri__name">
+                                    {% chunk 'prices.list.'|concat:id|concat:'.name' %}
+                                </h3>
+                                {% if price.name_icon %}
+                                    {% svg 'm-prices-gost-icon.svg' class="pri__name-icon" %}
+                                {% endif %}
+                            </div>
+                            <span class="pri__subtitle">
+                                {% chunk 'prices.list.'|concat:id|concat:'.subtitle' %}
+                            </span>
+                        </div>
+                        {% img_tag price.implant width=106 height=84 class="pri__implant" %}
+                    </div>
+                    <div class="pri__prices">
+                        <span class="pri__price">
+                            <nobr>
+                                {% chunk 'prices.list.'|concat:id|concat:'.price' %}
+                            </nobr>
+                        </span>
+                        <div class="pri__type">
+                            {% chunk 'prices.list.'|concat:id|concat:'.type' %}
+                        </div>
+                    </div>
+                </div>
+                <div class="pri__list">
+                    <span class="pri__list-title">
+                        {% chunk 'prices.list.'|concat:id|concat:'.list_title' %}
+                    </span>
+                    {% chunk 'prices.list.'|concat:id|concat:'.list_price' %}
+                </div>
+                <a href="javascript:void(0);"
+                   class="pri__second-step link link_dashed"
+                   data-js="popup"
+                   data-js-popup="modal-price-{{price.modal_id}}"
+                >
+                    <span>
+                        {% chunk 'prices.list.'|concat:id|concat:'.second_step' raw=True %}
+                    </span>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

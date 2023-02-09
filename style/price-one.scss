@@ -1,0 +1,90 @@
+.prices__wrap_one {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 104px;
+
+  .h2 {
+      max-width: 635px;
+  }
+}
+
+@include laptop {
+
+  .prices__wrap_one {
+    padding-right: 0;
+
+    .h2 {
+      max-width: 635px;
+      padding-bottom: 35px;
+    }
+
+    .prices__subtitle {
+      padding-bottom: 59px;
+    }
+
+    .pri__name {
+      padding-right: 37px;
+    }
+
+    .pri__implant {
+      margin-right: -3px;
+    }
+
+    .prices__list {
+      margin-top: 27px;
+    }
+  }
+}
+
+@include tablet {
+
+  .prices__wrap_one {
+    padding-right: 19px;
+
+    .h2 {
+      padding-bottom: 24px;
+    }
+
+    .prices__subtitle {
+      padding-bottom: 26px;
+    }
+
+    .prices__installments {
+      margin-bottom: 24px;
+      padding: 13px 0 13px 20px;
+    }
+
+    .prices__label {
+      padding: 11px 0 11px 27px;
+    }
+
+    .prices__list {
+      margin-top: -5px;
+    }
+  }
+}
+
+@include mobile {
+
+
+  .prices__wrap_one {
+    padding-right: 0;
+
+    .h2 {
+      padding-bottom: 15px;
+      max-width: 100%;
+    }
+
+    .prices__subtitle {
+      padding-bottom: 22px;
+    }
+
+    .prices__installments {
+      margin-bottom: 19px;
+    }
+
+    .prices__label {
+      padding: 13px 0 9px 18px;
+    }
+  }
+}

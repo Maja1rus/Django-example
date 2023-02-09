@@ -1,0 +1,48 @@
+{% load core_tags core_filters %}
+{% define 'data:prices.list' as list %}
+{% define 'data:prices.list_warranty' as list_warranty %}
+
+<section class="prices cp__container" data-js-scroll-target="prices">
+    <div class="row">
+        {% if list|length == 1 %}
+            {% module "m-prices" file="views/price-one" list=list %}
+        {% elif list|length == 2 %}
+            {% module "m-prices" file="views/price-two" list=list %}
+        {% else %}
+            {% module "m-prices" file="views/price-more" list=list %}
+        {% endif %}
+        <div class="prices__warranty">
+            {% for item in list_warranty %}
+                <div class="pw__item">
+                    <div class="pw__top">
+                        {% svg item.icon class="pw__icon" %}
+                        <div class="pw__top-title">
+                            <div class="pw__subtitle">
+                                {% if is_content_manager %}
+                                    {% chunk 'prices.list_warranty.'|concat:forloop.counter0|concat:'.subtitle' raw=True %}
+                                {% else %}
+                                    {% chunk 'prices.list_warranty.'|concat:forloop.counter0|concat:'.subtitle' %}
+                                {% endif %}
+                            </div>
+                            <div class="pw__title">
+                                {% chunk 'prices.list_warranty.'|concat:forloop.counter0|concat:'.title' %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pw__bottom">
+                        <div class="pw__text">
+                            {% chunk 'prices.list_warranty.'|concat:forloop.counter0|concat:'.text' %}
+                        </div>
+                        {% img_tag item.img width=147 height=142 class="pw__img" %}
+                        {% if item.implant %}
+                            {% img_tag item.implant width=102 height=114 class="pw__implant" %}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% if is_content_manager %}
+        {% include "common/blocks/chunk-panel/florenciya_allon4_spb__blank__sinergium__ru/m-prices/chunk-panel.html" %}
+    {% endif %}
+</section>

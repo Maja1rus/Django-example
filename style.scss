@@ -1,0 +1,756 @@
+.prices {
+  position: relative;
+  padding-top: 85px;
+  padding-bottom: 100px;
+  background-color: $bg_light;
+}
+
+.prices__wrap {
+
+  .h2 {
+    padding-bottom: 32px;
+    line-height: 58px;
+  }
+}
+
+.prices__subtitle {
+  @include font($font_light);
+  display: block;
+  padding-bottom: 35px;
+  max-width: 410px;
+  font-size: 27px;
+  line-height: 38px;
+}
+
+.prices__installments {
+  padding: 12px 0 11px 34px;
+  max-width: 314px;
+  margin-bottom: 35px;
+  font-size: 16px;
+  line-height: 19px;
+  color: $white;
+  background-color: $common_color;
+  border-radius: 5px;
+
+  span {
+    display: inline-block;
+    max-width: 219px;
+  }
+}
+
+.prices__label {
+  display: flex;
+  align-items: center;
+  padding: 12px 0 11px 28px;
+  column-gap: 12px;
+  max-width: 314px;
+  color: $white;
+  background-color: $common_color;
+  border-radius: 5px;
+
+  span {
+    max-width: 227px;
+  }
+}
+
+.prices__item {
+  padding: 14px 18px 31px 18px;
+  background-color: $white;
+  box-shadow: 0 2px 30px 1px rgba(15, 47, 71, 0.03);
+  border-radius: 20px;
+}
+
+.pri__top {
+  padding: 13px 4px 22px 19px;
+  color: $white;
+  background: $common_color;
+  box-shadow: 0 2px 30px 1px rgba(15, 47, 71, 0.03);
+  border-radius: 5px;
+}
+
+.pri__top-wrap {
+  display: flex;
+  column-gap: 14px;
+  padding-bottom: 14px;
+}
+
+.pri__title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.pri__flag {
+  border-radius: 5px;
+}
+
+.pri__name {
+  @include font($font_futura_bold);
+  display: inline-block;
+  padding-left: 8px;
+  font-size: 21px;
+  line-height: 27px;
+}
+
+.pri__name-icon {
+  padding-left: 38px;
+  margin-right: -3px;
+}
+
+.pri__subtitle {
+  @include font($font_bold);
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.pri__implant {
+  margin-top: -7px;
+  flex-shrink: 0;
+}
+
+.pri__prices {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 17px;
+}
+
+.pri__price {
+  @include font($font_futura_bold);
+  width: 158px;
+  color: $bold_color;
+  text-align: center;
+  font-size: 24px;
+  line-height: 38px;
+  background-color: $white;
+  border-radius: 5px;
+}
+
+.pri__type {
+  @include font($font_light);
+  display: inline-block;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.pri__list {
+  padding-top: 14px;
+  padding-bottom: 28px;
+  padding-left: 17px;
+
+  ul {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    row-gap: 15px;
+    column-gap: 25px;
+  }
+
+  li {
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 24px;
+
+    &::before {
+      left: 2px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+.pri__list-title {
+  @include font($font_futura_bold);
+  display: inline-block;
+  padding-bottom: 13px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.pri__second-step {
+  @include font($font_bold);
+  padding-left: 18px;
+  color: $common_color;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.prices__more {
+  display: none;
+}
+
+.prices__slider-nav {
+  display: none;
+}
+
+.prices__slider-nav_desktop {
+  display: block;
+}
+
+.prices__warranty {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px;
+  padding: 46px 90px 31px 62px;
+  background-color: $white;
+  box-shadow: 0 2px 30px 1px rgba(15, 47, 71, 0.03);
+  border-radius: 5px;
+}
+
+.pw__item {
+  position: relative;
+
+  &:not(:last-child) {
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 220px;
+      background-color: $common_color;
+      right: -98px;
+      top: -8px;
+    }
+  }
+}
+
+.pw__top {
+  display: flex;
+  column-gap: 19px;
+}
+
+.pw__top-title {
+  position: relative;
+}
+
+.pw__subtitle {
+  @include font($font_futura_regular);
+  position: absolute;
+  left: 60px;
+  top: 12px;
+  font-size: 22px;
+  line-height: 28px;
+  background-image: $common_gradient;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.pw__title {
+  @include font($font_futura_bold);
+  min-width: 320px;
+  font-size: 45px;
+  line-height: 58px;
+  color: $common_color;
+
+  .accent {
+    display: inline-block;
+    max-width: 55px;
+    font-size: 84px;
+    line-height: 104px;
+  }
+}
+
+.pw__bottom {
+  position: relative;
+  margin: 0 auto;
+  width: 470px;
+  color: $white;
+  background-color: $common_color;
+  border-radius: 5px;
+}
+
+.pw__text {
+  padding: 15px 10px 14px 40px;
+  max-width: 400px;
+}
+
+.pw__img {
+  position: absolute;
+  top: -23px;
+  right: -51px;
+}
+
+.pw__implant {
+  position: absolute;
+  top: 5px;
+  right: -69px;
+}
+
+@include laptop {
+
+  .prices {
+    position: unset;
+    padding-top: 109px;
+    padding-bottom: 70px;
+  }
+
+  .prices__wrap {
+
+    .h2 {
+      line-height: 50px;
+    }
+  }
+
+  .prices__info-wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    .prices__subtitle {
+      max-width: 290px;
+      padding-bottom: 0;
+    }
+
+    .prices__installments {
+      max-width: 266px;
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  .prices__label_float {
+    position: absolute;
+    min-width: 357px;
+    right: -47px;
+    top: 133px;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .prices__subtitle {
+    padding-bottom: 59px;
+    font-size: 22px;
+    line-height: 32px;
+    max-width: 329px;
+  }
+
+  .prices__warranty {
+    padding: 36px 39px 31px 21px;
+    margin: 62px auto 0 auto;
+    max-width: 930px;
+  }
+
+  .pw__item {
+
+    &:not(:last-child) {
+
+      &::before {
+        right: -40px;
+        top: -17px;
+      }
+    }
+  }
+
+  .pw__top {
+    column-gap: 5px;
+  }
+
+  .pw__icon {
+    width: 73px;
+    height: 73px;
+  }
+
+  .pw__subtitle {
+    top: 3px;
+  }
+
+  .pw__title {
+    min-width: 305px;
+    font-size: 37px;
+    line-height: 58px;
+
+    .accent {
+      font-size: 79px;
+      line-height: 86px;
+    }
+  }
+
+  .pw__bottom {
+    width: 383px;
+    margin: 7px auto 0 auto;
+  }
+
+  .pw__text {
+    padding: 15px 10px 21px 23px;
+    max-width: 300px;
+    line-height: 21px;
+  }
+
+  .pw__img {
+    right: -33px;
+  }
+
+  .pw__implant {
+    top: 3px;
+    right: -50px;
+  }
+}
+
+@include tablet {
+
+  .prices {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .prices__wrap {
+
+    .h2 {
+      line-height: 40px;
+    }
+  }
+
+  .prices__installments {
+    max-width: 321px;
+
+    span {
+      max-width: 290px;
+    }
+  }
+
+  .pri__top {
+    position: relative;
+  }
+
+  .prices__info-wrap {
+    flex-direction: column;
+    row-gap: 25px;
+
+    .prices__subtitle {
+      max-width: 100%;
+    }
+
+    .prices__installments {
+      margin-right: auto;
+      max-width: 321px;
+    }
+  }
+
+  .prices__label_float {
+    min-width: 374px;
+    right: -15px;
+    top: 167px;
+    padding: 11px 0 10px 28px;
+  }
+
+  .pri__name-icon {
+    position: absolute;
+    right: 13px;
+    bottom: 20px;
+  }
+
+  .pri__implant {
+    position: absolute;
+    width: 92px;
+    height: 73px;
+    top: -21px;
+    right: -43px;
+  }
+
+  .prices__subtitle {
+    font-size: 20px;
+    line-height: 29px;
+  }
+
+  .pri__top {
+    padding: 16px 21px 22px 19px;
+  }
+
+  .pri__top-wrap {
+    padding-bottom: 6px;
+  }
+
+  .pri__flag {
+    width: 28px;
+    height: 17px;
+  }
+
+  .pri__title {
+    padding-bottom: 10px;
+  }
+
+  .pri__prices {
+    flex-direction: column;
+    row-gap: 9px;
+  }
+
+  .pri__list {
+    row-gap: 9px;
+    padding-top: 23px;
+    padding-bottom: 22px;
+
+    ul {
+      grid-template-columns: auto;
+      row-gap: 12px;
+    }
+  }
+
+  .prices__warranty {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 49px;
+    max-width: 620px;
+    margin: 39px auto 0 auto;
+    padding: 36px 39px 31px 67px;
+  }
+
+  .pw__item {
+
+    &:not(:last-child) {
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .pw__subtitle {
+    left: 56px;
+  }
+
+  .pw__bottom {
+    margin-left: 0;
+    width: 424px;
+  }
+
+  .pw__text {
+    padding: 15px 10px 16px 23px;
+    max-width: 387px;
+  }
+
+  .pw__img {
+    right: -92px;
+  }
+
+  .pw__implant {
+    top: 6px;
+    right: -107px;
+  }
+}
+
+@include mobile {
+
+  .prices__wrap {
+    flex-direction: column;
+    row-gap: 37px;
+    
+    .h2 {
+      padding-bottom: 15px;
+      text-align: center;
+      line-height: 32px;
+    }
+  }
+
+  .prices__subtitle {
+    padding-bottom: 22px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .prices__info-wrap {
+    row-gap: 22px;
+
+    .prices__installments {
+      max-width: 312px;
+    }
+  }
+
+  .prices__installments {
+    margin: 0 auto 19px auto;
+  }
+
+  .prices__label {
+    margin: 0 auto;
+    padding: 13px 0 9px 18px;
+  }
+
+  .prices__label_float {
+    position: unset;
+    margin-top: 19px;
+    border-radius: 5px;
+  }
+
+  .prices__list {
+    margin: 0 auto;
+  }
+
+  .prices__item {
+    max-width: 330px;
+  }
+
+  .pri__top {
+    padding: 17px 22px 12px 19px;
+  }
+
+  .pri__top-wrap {
+    padding-bottom: 16px;
+  }
+
+  .pri__implant {
+    top: -14px;
+    right: -39px;
+  }
+
+  .prices__more {
+    @include font($font_futura_regular);
+    display: block;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+    color: $common_color;
+
+    svg {
+      margin-left: 6px;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .prices__slider-nav,
+  .prices__slider-nav_desktop {
+    display: none;
+  }
+
+  .prices__warranty {
+    max-width: 550px;
+    row-gap: 46px;
+    margin-top: 43px;
+  }
+
+  .pw__top {
+    padding-left: 17px;
+    column-gap: 8px;
+  }
+
+  .pw__icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .pw__subtitle {
+    top: 2px;
+    left: 53px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .pw__title {
+    font-size: 28px;
+    line-height: 36px;
+
+    .accent {
+      font-size: 70px;
+      line-height: 63px;
+    }
+  }
+
+  .pw__bottom {
+    margin: 11px auto 0;
+  }
+
+  .pw__text {
+    padding: 16px 10px 17px 16px;
+    max-width: 285px;
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .pw__img {
+    width: 122px;
+    height: 118px;
+    top: -4px;
+    right: unset;
+    left: 243px;
+  }
+
+  .pw__implant {
+    width: 73px;
+    height: 81px;
+    top: 33px;
+    left: 287px;
+    right: unset;
+  }
+}
+
+@media screen and(max-width: 550px) {
+
+  .prices__warranty {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 30px 0 21px 0;
+    border-radius: 0;
+  }
+
+  .pw__bottom {
+    border-radius: 0;
+    width: 550px;
+  }
+}
+
+@media screen and(max-width: 450px) {
+
+  .prices {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .prices__label {
+    max-width: 500px;
+    margin-left: -15px;
+    margin-right: -34px;
+    border-radius: 0;
+  }
+
+  .prices__installments {
+    margin-left: -15px;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+@media screen and(max-width: 350px) {
+
+  .pw__top {
+    align-items: center;
+    padding-left: 15px;
+  }
+
+  .pw__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .pw__title {
+    font-size: 22px;
+
+    .accent {
+      font-size: 60px;
+    }
+  }
+
+  .pw__subtitle {
+    font-size: 16px;
+    left: 45px;
+  }
+
+  .pw__text {
+    max-width: 220px;
+  }
+
+  .pw__img {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 202px;
+  }
+
+  .pw__implant {
+    left: 250px;
+  }
+}
+
+@import '~modules/m-prices/florenciya_allon4_spb__blank__sinergium__ru/style/price-one';
+@import '~modules/m-prices/florenciya_allon4_spb__blank__sinergium__ru/style/price-two';
+@import '~modules/m-prices/florenciya_allon4_spb__blank__sinergium__ru/style/price-more';
